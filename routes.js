@@ -59,7 +59,7 @@ router.post("/books",async (req,res)=>{
 
 router.patch("/books/:id",async (req,res)=>{
     var id = req.params.id;
-    await Book.findOneAndUpdate({_id:id},{$set:{bookname:req.body.name,bookqty:req.body.qty}});
+    await Book.findOneAndUpdate({_id:id},{$set:{bookname:req.body.bookname,bookqty:req.body.bookqty}});
     
 })
 
